@@ -1,0 +1,47 @@
+[project]
+name = "azfunctions-self-hosted-mcp-srv"
+version = "0.1.0"
+description = "Self-hosted MCP server on Azure Functions exposing NVD CVE lookup tools."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = { file = "LICENSE" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", ".python_packages", "build", "dist"]
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "W",   # pycodestyle / pyflakes
+    "I",             # isort
+    "B",             # flake8-bugbear
+    "UP",            # pyupgrade
+    "SIM",           # flake8-simplify
+    "RUF",           # ruff-specific
+    "S",             # flake8-bandit (security)
+]
+ignore = [
+    "E501",          # line length handled by formatter
+    "S101",          # assert use is fine in tests
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+ignore_missing_imports = true
+exclude = ["\\.venv", "\\.python_packages", "build", "dist"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning:azure.functions.*",
+]

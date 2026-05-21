@@ -1,0 +1,2 @@
+# Kept separate from requirements.txt so the deployed function app stays minimal.
+claude-agent-sdk>=0.1.0
