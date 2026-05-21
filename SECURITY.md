@@ -4,7 +4,7 @@
 
 If you discover a security issue in this repository, please report it privately rather than opening a public issue.
 
-- **Preferred:** email the maintainer with the subject `[SECURITY] azfunctions-self-hosted-mcp-srv`.
+- **Preferred:** email the maintainer with the subject `[SECURITY] nvd-cve-lookup-mcp-server`.
 - Include a minimal reproduction, the affected commit or deployed endpoint, and any logs that demonstrate the impact.
 - Allow up to **5 working days** for an initial acknowledgement and **30 days** for a coordinated fix before any public disclosure.
 

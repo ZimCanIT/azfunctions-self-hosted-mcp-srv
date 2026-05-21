@@ -1,5 +1,5 @@
 [project]
-name = "azfunctions-self-hosted-mcp-srv"
+name = "nvd-cve-lookup-mcp-server"
 version = "0.1.0"
 description = "Self-hosted MCP server on Azure Functions exposing NVD CVE lookup tools."
 readme = "README.md"
